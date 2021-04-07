@@ -1,9 +1,9 @@
-//% color=#FEE227 weight=0 icon="\uf1d8" block="Broadcasts"
+//% color=#37E0FF weight=0 icon="\uf1d8" block="Broadcasts"
 namespace Broadcasts {
     let broadcast_active = -1
     //% shim=ENUM_GET2983
     //% blockId=broadcasts82932938283929323232323
-    //% block="$variable"
+    //% block="$broad"
     //% enumName="Broadcasts"
     //% enumMemberName="Broadcast"
     //% enumPromptHint="Broadcast..."
