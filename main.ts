@@ -12,13 +12,11 @@ namespace Broadcasts {
         if (broadcat_active == broadcat) {
             broadcat_active = NaN
             return true
-        } else {
-            broadcat_active = NaN
-            return false
-        }
+        } 
+        return false
     }
     //% blockId=stuff032382932898
-    //% block="when I receive %broadcast"
+    //% block="when I receive %broadcat"
     //% broadcat.shadow="broadcasts82932938283929323232323"
     export function broadcast_receive (broadcat: string, a: () => void) {
         basic.forever(function () {
