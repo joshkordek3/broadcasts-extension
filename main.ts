@@ -1,36 +1,36 @@
 //% color=#37E0FF weight=0 icon="\uf1d8" block="Broadcasts"
 namespace Broadcasts {
-    let broadcast_active = -1
+    let broadcat_active = -1
     //% shim=ENUM_GET2938
     //% blockId=broadcasts82932938283929323232323
-    //% block="$Broadcast"
-    //% enumName="Broadcasts"
-    //% enumMemberName="Broadcast"
+    //% block="%Broadcat"
+    //% enumName="Broadcats"
+    //% enumMemberName="Broadcat"
     //% enumPromptHint="Broadcast..."
     //% enumInitialMembers="message1"
     //% blockHidden=true
-    export function dummy (Broadcast: number) {
-        return Broadcast
+    export function dummy (Broadcat: number) {
+        return Broadcat
     }
     //% blockId=stuff032382932
-    //% block="broadcast $broadcast"
+    //% block="broadcast %broadcat"
     //% broadcast.shadow="broadcasts82932938283929323232323"
-    export function broadcast (broadcast: number) {
-        broadcast_active = broadcast
+    export function broadcast (broadcat: number) {
+        broadcat_active = broadcat
     }
     //% blockId=stuff032382932898988
-    //% block="I receive $broadcast"
+    //% block="I receive %broadcast"
     //% broadcast.shadow="broadcasts82932938283929323232323"
-    export function broadcast_receive2 (broadcast: number) {
-        return broadcast_active == broadcast
+    export function broadcast_receive2 (broadcat: number) {
+        return broadcat_active == broadcat
     }
     //% blockId=stuff032382932898
-    //% block="when I receive $broadcast"
+    //% block="when I receive %broadcast"
     //% broadcast.shadow="broadcasts82932938283929323232323"
-    export function broadcast_receive (broadcast: number, a: () => void) {
+    export function broadcast_receive (broadcat: number, a: () => void) {
         basic.forever(function () {
-            if (broadcast_receive2(broadcast)) {
-                broadcast_active = -1
+            if (broadcast_receive2(broadcat)) {
+                broadcat_active = -1
                 control.inBackground(a)
             }
         })
