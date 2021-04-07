@@ -16,7 +16,7 @@ namespace Broadcasts {
         return false
     }
     //% blockId=stuff032382932898
-    //% block="when I receive %broadcat"
+    //% block="when I receive %broadcast"
     //% broadcat.shadow="broadcasts82932938283929323232323"
     export function broadcast_receive (broadcat: string, a: () => void) {
         basic.forever(function () {
