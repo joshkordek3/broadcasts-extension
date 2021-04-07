@@ -18,12 +18,18 @@ namespace Broadcasts {
     export function broadcast (broadcast: number) {
         broadcast_active = broadcast
     }
+    //% blockId=stuff032382932898988
+    //% block="I receive $broadcast"
+    //% broadcast.shadow="broadcasts82932938283929323232323"
+    export function broadcast_receive2 (broadcast: number) {
+        return broadcast_active == broadcast
+    }
     //% blockId=stuff032382932898
     //% block="when I receive $broadcast"
     //% broadcast.shadow="broadcasts82932938283929323232323"
     export function broadcast_receive (broadcast: number, a: () => void) {
         basic.forever(function () {
-            if (broadcast_active == broadcast) {
+            if (broadcast_receive2(broadcast)) {
                 broadcast_active = -1
                 control.inBackground(a)
             }
