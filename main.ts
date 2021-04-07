@@ -7,9 +7,15 @@ namespace Broadcasts {
         broadcat_active = broadcat
     }
     //% blockId=stuff032382932898988
-    //% block="I receive %broadcast"
+    //% block="I receive %broadcat"
     export function broadcast_receive2 (broadcat: string) {
-        return broadcat_active == broadcat
+        if (broadcat_active == broadcat) {
+            broadcat_active = NaN
+            return true
+        } else {
+            broadcat_active = NaN
+            return false
+        }
     }
     //% blockId=stuff032382932898
     //% block="when I receive %broadcast"
@@ -17,7 +23,6 @@ namespace Broadcasts {
     export function broadcast_receive (broadcat: string, a: () => void) {
         basic.forever(function () {
             if (broadcast_receive2(broadcat)) {
-                broadcat_active = NaN
                 control.inBackground(a)
             }
         })
