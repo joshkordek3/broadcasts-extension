@@ -14,19 +14,19 @@ namespace Broadcasts {
     }
     //% blockId=stuff032382932
     //% block="broadcast %broadcat"
-    //% broadcast.shadow="broadcasts82932938283929323232323"
+    //% broadcat.shadow="broadcasts82932938283929323232323"
     export function broadcast (broadcat: number) {
         broadcat_active = broadcat
     }
     //% blockId=stuff032382932898988
     //% block="I receive %broadcast"
-    //% broadcast.shadow="broadcasts82932938283929323232323"
+    //% broadcat.shadow="broadcasts82932938283929323232323"
     export function broadcast_receive2 (broadcat: number) {
         return broadcat_active == broadcat
     }
     //% blockId=stuff032382932898
     //% block="when I receive %broadcast"
-    //% broadcast.shadow="broadcasts82932938283929323232323"
+    //% broadcat.shadow="broadcasts82932938283929323232323"
     export function broadcast_receive (broadcat: number, a: () => void) {
         basic.forever(function () {
             if (broadcast_receive2(broadcat)) {
