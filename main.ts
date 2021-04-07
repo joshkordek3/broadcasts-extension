@@ -1,3 +1,4 @@
+//% color=#FEE227 weight=0 icon="\uf1d8" block="Broadcasts"
 namespace Broadcasts {
     let broadcast_active = -1
     //% shim=ENUM_GET2983
